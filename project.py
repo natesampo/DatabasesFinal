@@ -1,27 +1,12 @@
 ######################################################################
 #
-# HOMEWORK 3
+# Databases Final Project
 #
-# Due: Sun 3/17/19 23h59.
+# 5/8/2019
 #
 # Name: Camille Xue and Nate Sampo
 #
 # Email: cxue@olin.edu, nsampo@olin.edu
-#
-# Remarks, if any:
-#
-#
-######################################################################
-
-
-######################################################################
-#
-# Python 3 code
-#
-# Please fill in this file with your solutions and submit it
-#
-# The functions below are stubs that you should replace with your
-# own implementation.
 #
 ######################################################################
 
@@ -452,22 +437,21 @@ def evaluate_query_aggr (query):
 # })
 
 cross = PERSONS.cross_join(BOOKS)
-# print(cross)
+print("PERSONS Cross Join BOOKS:")
+print(cross)
 
 inner = BOOKS.inner_join(AUTHORED_BY, "isbn")
-# print(inner)
+print("BOOKS Inner Join AUTHORED_BY On isbn:")
+print(inner)
 
 left1 = PERSONS.left_outer_join(AUTHORED_BY, "lastName")
-# print(left1)
-
-left2 = PERSONS.left_outer_join(AUTHORED_BY, "firstName")
-# print(left2)
+print("PERSONS Left Outer Join AUTHORED_BY On lastName:")
+print(left1)
 
 right = PERSONS.right_outer_join(AUTHORED_BY, "lastName")
-# print(right)
-
-right2 = PERSONS.right_outer_join(AUTHORED_BY, "isbn")
-# print(right2)
+print("PERSONS Right Outer Join AUTHORED_BY On lastName:")
+print(right)
 
 full = PERSONS.full_outer_join(AUTHORED_BY, "lastName")
-# print(full)
+print("PERSONS Full Outer Join AUTHORED_BY On lastName:")
+print(full)
